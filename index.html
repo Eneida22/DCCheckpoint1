@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Assignment</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #fff;
+        }
+        .gridOne {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .gridOne p:nth-child(2) {
+            color: blue;
+        }
+        .gridTwo {
+            display: grid;
+            grid-template-columns: 1fr 1fr 2fr;
+        }
+        .gridTwo div:nth-child(1) { background-color: red; }
+        .gridTwo div:nth-child(2) { background-color: blue; }
+        .gridTwo div:nth-child(3) { background-color: yellow; }
+        .gridThree {
+            display: grid;
+            grid-template-rows: 1fr 3fr;
+            width: 500px;
+            height: 300px;
+        }
+        .gridThree div:first-child { background-color: lightgray; }
+        .gridThree img {
+            width: 500px;
+            height: 225px;
+            object-fit: cover;
+        }
+        .gridFour {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            width: 500px;
+            background-color: green;
+        }
+        #nestedGrid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .gridFive {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            width: 500px;
+        }
+        .gridFive img {
+            height: 200px;
+            object-fit: cover;
+        }
+        .gridSix {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            width: 500px;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <div class="gridOne">
+        <p>Hello World</p>
+        <p>My Fantastic Content</p>
+    </div>
+    <div class="gridTwo">
+        <div><p>Content 1</p></div>
+        <div><p>Content 2</p></div>
+        <div><p>Content 3</p></div>
+    </div>
+    <div class="gridThree">
+        <div><p>Some text</p></div>
+        <img src="example.jpg" alt="Example Image">
+    </div>
+    <div class="gridFour">
+        <div><p>Grid Four Content</p></div>
+        <div id="nestedGrid">
+            <p>Nested Content 1</p>
+            <p>Nested Content 2</p>
+        </div>
+    </div>
+    <div class="gridFive">
+        <div><p>Grid Five Content</p></div>
+        <div>
+            <img src="image1.jpg" alt="Image 1">
+            <img src="image2.jpg" alt="Image 2">
+        </div>
+    </div>
+    <div class="gridSix">
+        <i class="fas fa-star"></i>
+        <p style="font-family: 'Roboto', sans-serif;">Some styled text</p>
+    </div>
+</body>
+</html>
